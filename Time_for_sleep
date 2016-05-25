@@ -1,0 +1,10 @@
+x = 60 * int(input("How much hours need you for sleep?: "))
+h = 60 * int(input("What time did you go to bed?: "))
+m = int(input("+ minutes: "))
+t = x+h+m
+m1 = t
+t2 = t // 60 - 24 if t // 60 > 24 else t // 60
+if t2 < 12 and (m1 % 60) >= 0:
+    print(t2, ":", m1 % 60, "AM")
+else:
+    print(t2, ":", m1 % 60, "PM")
